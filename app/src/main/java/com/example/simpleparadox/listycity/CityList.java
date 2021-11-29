@@ -23,6 +23,18 @@ public class CityList {
     }
 
     /**
+     * This deletes a specified city object from the list if exists,  if not then throws an exception
+     */
+    public void deleteCity(City city){
+        try{
+            cities.remove(city);
+        }
+        catch (Exception e){
+            System.out.println("Exception: "+e.toString());
+        }
+    }
+
+    /**
      * This returns a sorted list of cities
      * @return
      *      Return the sorted list
@@ -33,4 +45,12 @@ public class CityList {
         return list;
     }
 
+    /**
+     * This returns the size of the city list
+     * @return
+     *      The size of city list
+     */
+    public int countCities(){
+        return cities.size();
+    }
 }
